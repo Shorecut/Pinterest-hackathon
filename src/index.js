@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import AuthContext from "./contexts/AuthContext";
 import CartContext from "./contexts/CartContext";
 import PinContext from "./contexts/PinContext";
+import Toastify from "./components/Toastify";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +14,9 @@ root.render(
     {/*<AuthContext> */}
     {/* на потом */}
     {/*<CartContext>*/}
+
     <PinContext>
+      <Toastify />
       <App />
     </PinContext>
     {/*</CartContext>*/}
