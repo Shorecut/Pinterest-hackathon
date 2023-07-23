@@ -1,3 +1,10 @@
 {
-  "pins": []
+  "pins": [
+    {
+      "id": 1,
+      "title": "homo",
+      "image": "https://avatars.mds.yandex.net/i?id=a4d7bcea0b3d50a77d557c01ddce35554f0c19ac-6468571-images-thumbs&n=13",
+      "category": "animals"
+    }
+  ]
 }
