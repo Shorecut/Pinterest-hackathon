@@ -34,36 +34,51 @@
 }
 
 .pin .content {
-  width: 100%;
   height: 50px;
-  background: rgba(255, 255, 255, 0.2);
   position: absolute;
-  bottom: -55px;
-  left: 0;
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 6px;
+}
+.pin .content2 {
+  position: absolute;
+  opacity: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
+.pin .card_cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.43);
+}
 
 .pin:hover .content {
   bottom: 0;
+  right: 0;
   transition: bottom 0.3s;
   padding: 0px 15px;
+  opacity: 1;
 }
 
-.pin:hover .content h3 {
-  color: #feffff;
-  font-size: 18px;
-  font-weight: 500;
+.pin:hover .content2 {
+  top: 10px;
+  transition: bottom 0.3s;
+  padding: 0px 15px;
+  opacity: 1;
+  right: 0;
 }
-
-.pin .search {
-  background: #fb3874;
+.pin:hover .card_cover {
+  top: 0;
+  transition: bottom 0.3s;
+  opacity: 1;
 }
-
 @media screen and (max-width: 480px) {
   .App {
     padding: 0 20px;
@@ -78,4 +93,33 @@
   main {
     margin-left: 75px;
   }
+}
+
+/* ? Buttons in the cards */
+.card_btn_save {
+  background-color: red;
+  font-size: 15px;
+  color: white;
+  border: none;
+  height: 45px;
+  width: 100px;
+  border-radius: 28px;
+}
+.card_btn_save:hover {
+  background-color: rgb(185, 16, 16);
+}
+
+.card_deatils {
+  font-size: 90px;
+}
+.card_button {
+  border-radius: 50%;
+  width: 30px;
+  padding-top: 3px;
+  height: 30px;
+  border: none;
+  background-color: #d4d4d4;
+}
+.card_button:hover {
+  background-color: rgb(255, 255, 255);
 }
