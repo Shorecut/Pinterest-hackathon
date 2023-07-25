@@ -6,6 +6,7 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import LiveSearch from "./LiveSearch";
 
 export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -115,10 +116,7 @@ export default function PrimarySearchAppBar() {
           <button className="home">Главная</button>
           <button className="home create2">Создать</button>
         </div>
-        <div className="search">
-          <i className="fas fa-search"></i>
-          <input type="search" name="" placeholder=" &#128269; Search" id="" />
-        </div>
+        <LiveSearch />
         <div className="right">
           <IconButton
             size="large"
