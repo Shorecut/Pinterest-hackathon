@@ -145,25 +145,18 @@ export default function PrimarySearchAppBar() {
             <button className="create2">Создать</button>
           </NavLink>
         </div>
-
-        <div className="search_container">
-
         <div className="search">
-
-          <LiveSearch />
+          <i className="fas fa-search"></i>
+          <input type="search" name="" placeholder=" &#128269; Search" id="" />
         </div>
-
         <div className="right">
-          <IconButton
-            size="large"
-            edge="end"
-            aria-label="account of current user"
-            aria-controls={menuId}
-            aria-haspopup="true"
-            onClick={handleProfileMenuOpen}
-            color="inherit"
-          >
-            <a href="#" className="avatar">
+          <div className="search_container">
+            <a
+              aria-controls={menuId}
+              onClick={handleProfileMenuOpen}
+              href="#"
+              className="avatar"
+            >
               <div className="img">
                 <img
                   src="https://i.pinimg.com/236x/a7/d4/f0/a7d4f0ffa91efca55737bdce28fd22f7.jpg"
@@ -171,18 +164,18 @@ export default function PrimarySearchAppBar() {
                 />
               </div>
             </a>
-          </IconButton>
 
-          <img
-            onClick={handleProfileMenuOpen}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
-            alt="burger-menu"
-            className="navbar_burger-menu"
-          />
+            <img
+              onClick={handleProfileMenuOpen}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
+              alt="burger-menu"
+              className="navbar_burger-menu"
+            />
+          </div>
         </div>
+        {renderMobileMenu}
+        {renderMenu}
       </div>
-      {renderMobileMenu}
-      {renderMenu}
     </div>
   );
 }

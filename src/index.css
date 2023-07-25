@@ -31,13 +31,14 @@ body {
   color: #151515;
 }
 .navbar {
+  padding: 10px 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   background-color: #fff;
 
-  margin: 0;
-  padding: 0;
   width: 100%;
 }
 .left {
@@ -132,11 +133,11 @@ body {
   font-size: 1rem;
 }
 .right {
-  /* width: 20%; */
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .fa-pinterest {
