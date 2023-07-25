@@ -21,9 +21,9 @@ export default function AddFoodPage() {
   const { addPin } = usePinContext();
   const [formValue, setFormValue] = React.useState({
     title: "",
-
     image: "",
     category: "",
+    size: "",
   });
 
   function handleChange(e) {
@@ -35,7 +35,8 @@ export default function AddFoodPage() {
     if (
       !formValue.title.trim() ||
       !formValue.image.trim() ||
-      !formValue.category.trim()
+      !formValue.category ||
+      !formValue.size
     ) {
       return;
     }
@@ -46,6 +47,7 @@ export default function AddFoodPage() {
       title: "",
       image: "",
       category: "",
+      size: "",
     });
   };
 
@@ -90,6 +92,20 @@ export default function AddFoodPage() {
               onChange={handleChange}
             />
             <FormControl fullWidth>
+              <InputLabel>Size</InputLabel>
+              <Select
+                value={formValue.size}
+                onChange={handleChange}
+                label="Size"
+                name="size"
+              >
+                <MenuItem value={"small"}>Small</MenuItem>
+                <MenuItem value={"medium"}>Medium</MenuItem>
+                <MenuItem value={"large"}>large</MenuItem>
+              </Select>
+            </FormControl>
+
+            <FormControl fullWidth sx={{ mt: 1 }}>
               <InputLabel>Category</InputLabel>
               <Select
                 value={formValue.category}
