@@ -6,7 +6,10 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+
 import { NavLink } from "react-router-dom";
+import LiveSearch from "./LiveSearch";
+
 
 export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -143,10 +146,7 @@ export default function PrimarySearchAppBar() {
             <button className="create2">Создать</button>
           </NavLink>
         </div>
-        <div className="search">
-          <i className="fas fa-search"></i>
-          <input type="search" name="" placeholder=" &#128269; Search" id="" />
-        </div>
+        <LiveSearch />
         <div className="right">
           <IconButton
             size="large"
