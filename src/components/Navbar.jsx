@@ -145,7 +145,11 @@ export default function PrimarySearchAppBar() {
             <button className="create2">Создать</button>
           </NavLink>
         </div>
+
         <div className="search_container">
+
+        <div className="search">
+
           <LiveSearch />
         </div>
 
