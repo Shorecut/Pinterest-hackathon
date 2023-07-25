@@ -8,9 +8,9 @@ const PinList = () => {
     getPins();
   }, []);
   return (
-    <div>
+    <div className="mainContainer">
       {pins.map((item) => (
-        <PinItem key={item.id} item={item} />
+        <PinItem key={item.id} item={item} pinSize={item.size} />
       ))}
     </div>
   );
