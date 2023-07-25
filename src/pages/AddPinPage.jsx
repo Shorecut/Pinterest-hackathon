@@ -101,7 +101,7 @@ export default function AddFoodPage() {
               >
                 <MenuItem value={"small"}>Small</MenuItem>
                 <MenuItem value={"medium"}>Medium</MenuItem>
-                <MenuItem value={"large"}>large</MenuItem>
+                <MenuItem value={"large"}>Large</MenuItem>
               </Select>
             </FormControl>
 
@@ -124,7 +124,8 @@ export default function AddFoodPage() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2, backgroundColor: "red" }}
+              color="error"
+              sx={{ mt: 3, mb: 2 }}
             >
               Add Pin
             </Button>
