@@ -1,46 +1,11 @@
 {
   "pins": [
     {
-      "id": 1,
-      "title": "homo",
-      "image": "https://avatars.mds.yandex.net/i?id=a4d7bcea0b3d50a77d557c01ddce35554f0c19ac-6468571-images-thumbs&n=13",
-      "category": "animals",
-      "size": "small"
-    },
-    {
-      "title": "qwerty",
-      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
-      "category": "animal",
-      "size": "large",
-      "id": 2
-    },
-    {
-      "title": "qwert",
-      "image": "https://tanks-alot.co.uk/wp-content/uploads/2022/08/image0.jpeg",
-      "category": "anime",
-      "size": "medium",
-      "id": 3
-    },
-    {
       "title": "qwe",
       "image": "https://tanks-alot.co.uk/wp-content/uploads/2022/08/image0.jpeg",
       "category": "car",
       "size": "small",
       "id": 4
-    },
-    {
-      "title": "wert",
-      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
-      "category": "animal",
-      "size": "large",
-      "id": 5
-    },
-    {
-      "title": "wert",
-      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
-      "category": "animal",
-      "size": "small",
-      "id": 6
     }
   ]
 }

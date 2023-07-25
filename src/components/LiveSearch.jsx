@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { usePinContext } from "./../contexts/PinContext";
+import Filter from "./Filter";
 
 const LiveSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchVal, setSearchVal] = React.useState(searchParams.get("q") || "");
   const { setPage } = usePinContext();
+  const [button, setButton] = useState(false);
+
+  function handleButton() {
+    setButton(!button);
+  }
 
   React.useEffect(() => {
     const currentParams = Object.fromEntries([...searchParams]);
@@ -26,6 +32,20 @@ const LiveSearch = () => {
         placeholder=" &#128269; Search"
         id=""
       />
+      <button
+        onClick={handleButton}
+        className="filter"
+        style={{
+          backgroundColor: "#e3e3e3",
+          border: "2px solid black",
+          fontWeight: "600",
+          borderRadius: "25px",
+          padding: "14px",
+        }}
+      >
+        Filter
+      </button>
+      {button && <Filter />}
     </div>
   );
 };

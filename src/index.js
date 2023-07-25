@@ -16,7 +16,7 @@ root.render(
     {/*<CartContext>*/}
 
     <PinContext>
-      <Toastify />
+      {/* <Toastify /> */}
       <App />
     </PinContext>
     {/*</CartContext>*/}
