@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { usePinContext } from "../contexts/PinContext";
+import React from "react";
 import { useSearchParams } from "react-router-dom";
+import { usePinContext } from "./../contexts/PinContext";
 
 const LiveSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchVal, setSearchVal] = useState(searchParams.get("q") || "");
+  const [searchVal, setSearchVal] = React.useState(searchParams.get("q") || "");
   const { setPage } = usePinContext();
 
-  useEffect(() => {
+  React.useEffect(() => {
     const currentParams = Object.fromEntries([...searchParams]);
     setSearchParams({
       ...currentParams,
@@ -15,20 +15,17 @@ const LiveSearch = () => {
     });
     setPage(1);
   }, [searchVal]);
-
   return (
-    <div>
-      <div className="search">
-        <i className="fas fa-search"></i>
-        <input
-          value={searchVal}
-          onChange={(e) => setSearchVal(e.target.value)}
-          type="search"
-          name=""
-          placeholder=" &#128269; Search"
-          id=""
-        />
-      </div>
+    <div className="search">
+      <i className="fas fa-search"></i>
+      <input
+        value={searchVal}
+        onChange={(e) => setSearchVal(e.target.value)}
+        type="search"
+        name=""
+        placeholder=" &#128269; Search"
+        id=""
+      />
     </div>
   );
 };
