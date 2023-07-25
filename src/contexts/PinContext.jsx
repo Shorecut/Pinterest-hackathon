@@ -6,9 +6,7 @@ import axios from "axios";
 
 const pinContext = createContext();
 
-export function usePinContext() {
-  return useContext(pinContext);
-}
+export const usePinContext = () => useContext(pinContext);
 
 const init = {
   pins: [],
