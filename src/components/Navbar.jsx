@@ -6,7 +6,10 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+
+import { NavLink } from "react-router-dom";
 import LiveSearch from "./LiveSearch";
+
 
 export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,10 +48,30 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Главная</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Создать</MenuItem>
+      <div className="navbar_burger-menu__menu">
+        <div className="img_profile_menu">
+          <img
+            src="https://i.pinimg.com/236x/a7/d4/f0/a7d4f0ffa91efca55737bdce28fd22f7.jpg"
+            alt=""
+          />
+        </div>
+        <div className="profile_text-items">
+          <MenuItem className="profile_text-item" onClick={handleMenuClose}>
+            <NavLink> Profile</NavLink>
+          </MenuItem>
+          <MenuItem className="profile_text-item" onClick={handleMenuClose}>
+            <NavLink to="/"> Главная</NavLink>
+          </MenuItem>
+          <MenuItem className="profile_text-item" onClick={handleMenuClose}>
+            <NavLink to="/add"> Создать</NavLink>
+          </MenuItem>
+          <MenuItem className="profile_text-item" onClick={handleMenuClose}>
+            <NavLink>
+              <button className="profile_button">Sign Out</button>
+            </NavLink>
+          </MenuItem>
+        </div>
+      </div>
     </Menu>
   );
 
@@ -108,13 +131,20 @@ export default function PrimarySearchAppBar() {
     <div>
       <div className="navbar">
         <div className="left">
-          <img
-            className="logo"
-            src="https://seeklogo.com/images/P/pinterest-logo-8561DDA2E1-seeklogo.com.png"
-            alt=""
-          />
-          <button className="home">Главная</button>
-          <button className="home create2">Создать</button>
+          <NavLink to="/">
+            <img
+              className="logo"
+              src="https://seeklogo.com/images/P/pinterest-logo-8561DDA2E1-seeklogo.com.png"
+              alt=""
+            />
+          </NavLink>
+
+          <NavLink to="/">
+            <button className="home">Главная</button>
+          </NavLink>
+          <NavLink to="/add">
+            <button className="create2">Создать</button>
+          </NavLink>
         </div>
         <LiveSearch />
         <div className="right">
@@ -136,21 +166,13 @@ export default function PrimarySearchAppBar() {
               </div>
             </a>
           </IconButton>
-          <IconButton
-            size="large"
-            edge="end"
-            aria-label="account of current user"
-            aria-controls={menuId}
-            aria-haspopup="true"
+
+          <img
             onClick={handleProfileMenuOpen}
-            color="inherit"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
-              alt="burger-menu"
-              className="navbar_burger-menu"
-            />
-          </IconButton>
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
+            alt="burger-menu"
+            className="navbar_burger-menu"
+          />
         </div>
       </div>
       {renderMobileMenu}

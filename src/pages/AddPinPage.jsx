@@ -62,7 +62,7 @@ export default function AddFoodPage() {
           }}
         >
           <Typography component="h1" variant="h5">
-            New Pin
+            Create New Pin
           </Typography>
           <Box
             component="form"
@@ -80,7 +80,6 @@ export default function AddFoodPage() {
               value={formValue.title}
               onChange={handleChange}
             />
-
             <TextField
               margin="normal"
               required
@@ -90,7 +89,6 @@ export default function AddFoodPage() {
               value={formValue.image}
               onChange={handleChange}
             />
-
             <FormControl fullWidth>
               <InputLabel>Category</InputLabel>
               <Select
@@ -106,12 +104,11 @@ export default function AddFoodPage() {
                 <MenuItem value={"art"}>art</MenuItem>
               </Select>
             </FormControl>
-
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, backgroundColor: "red" }}
             >
               Add Pin
             </Button>
