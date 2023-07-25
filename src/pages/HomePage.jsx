@@ -5,6 +5,8 @@ import { LIMIT } from "../utils/consts";
 import { useSearchParams } from "react-router-dom";
 import { usePinContext } from "../contexts/PinContext";
 
+import Filter from "./../components/Filter";
+
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { getPins, pageTotalCount, page, setPage } = usePinContext();
@@ -24,8 +26,6 @@ const HomePage = () => {
   return (
     <div>
       <div>
-        <Box sx={{ maxWidth: "max-content", margin: "30px auto" }}></Box>
-
         <PinList />
         {/* <Box sx={{ maxWidth: "max-content", margin: "30px auto" }}>
           <Pagination

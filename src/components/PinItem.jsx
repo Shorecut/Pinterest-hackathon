@@ -2,7 +2,12 @@ import React from "react";
 import "../card.css";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { usePinContext } from "../contexts/PinContext";
+import EditPinPage from "../pages/EditPinPage";
+import { useNavigate } from "react-router-dom";
 const PinItem = ({ item, pinSize }) => {
+  const { deletePin } = usePinContext();
+  const navigate = useNavigate();
   return (
     <div className={`pin ${pinSize}`}>
       <img src={item.image} alt="" className="mainPic" />
@@ -11,7 +16,7 @@ const PinItem = ({ item, pinSize }) => {
         <button className="card_btn_save">Сохранить</button>
       </div>
       <div className="content">
-        <button className="card_button">
+        <button onClick={() => navigate("/edit/:id")} className="card_button">
           <svg
             className="card_deatils bi bi-three-dots"
             xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +28,10 @@ const PinItem = ({ item, pinSize }) => {
             <EditIcon />
           </svg>
         </button>
-        <button className="card_button card_button_item2">
+        <button
+          onClick={() => deletePin(item.id)}
+          className="card_button card_button_item2"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

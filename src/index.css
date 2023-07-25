@@ -11,6 +11,10 @@ body {
   height: 100vh;
 }
 
+button {
+  cursor: pointer;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -77,7 +81,7 @@ body {
   background-color: white;
   font-size: 14px;
   font-weight: 600;
-  cursor: pointer ;
+  cursor: pointer;
 }
 .left .create2 {
   margin-right: 10px;
@@ -122,6 +126,22 @@ body {
 .search_container {
   width: 100%;
 }
+
+.filter {
+  color: #151515;
+  background-color: #767676;
+  /* color: #ffffff; */
+  border: none !important;
+  cursor: pointer;
+}
+
+/* Стиль кнопки при наведении на нее */
+.filter:hover {
+  background-color: rgb(255, 0, 0) !important;
+  transition: 1s;
+  color: #e3e3e3 !important;
+}
+
 .search input {
   width: 100%;
   border: none;
@@ -132,6 +152,9 @@ body {
 .search input::placeholder {
   color: #767676;
   font-size: 1rem;
+}
+.filter:hover {
+  background-color: #e60022;
 }
 .right {
   display: flex;
