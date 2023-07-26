@@ -8,4 +8,4 @@ export const ACTION = {
 
 export const ADMINS = [""]; // как закончим AuthContext
 
-export const LIMIT = 20;
+export const LIMIT = 5;

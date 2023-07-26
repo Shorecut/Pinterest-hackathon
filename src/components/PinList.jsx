@@ -5,7 +5,9 @@ import PinItem from "./PinItem";
 const PinList = () => {
   const { pins, getPins } = usePinContext();
   useEffect(() => {
-    getPins();
+    setTimeout(() => {
+      getPins();
+    }, 100);
   }, []);
   return (
     <div className="mainContainer">

@@ -15,7 +15,7 @@ const Filter = () => {
   useEffect(() => {
     const curPar = Object.fromEntries([...searchPar]);
     if (category === "all") {
-      const { _page, q } = curPar;
+      const { _limit, _page, q } = curPar;
       setSearchPar({
         _limit: LIMIT,
         _page: _page || 1,

@@ -7,14 +7,17 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import LiveSearch from "./LiveSearch";
+import { usePinContext } from "../contexts/PinContext";
+import { Button } from "@mui/material";
 
-export default function PrimarySearchAppBar() {
+export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
+  const { setPage } = usePinContext();
+  const navigate = useNavigate();
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -60,10 +63,10 @@ export default function PrimarySearchAppBar() {
             <NavLink> Profile</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink to="/"> Главная</NavLink>
+            <NavLink to="/">Главная</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink to="/add"> Создать</NavLink>
+            <NavLink to="/add">Создать</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
             <NavLink>
