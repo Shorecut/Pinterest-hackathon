@@ -16,7 +16,10 @@ const PinItem = ({ item, pinSize }) => {
         <button className="card_btn_save">Сохранить</button>
       </div>
       <div className="content">
-        <button onClick={() => navigate("/edit/:id")} className="card_button">
+        <button
+          onClick={() => navigate(`/edit/${item.id}`)}
+          className="card_button"
+        >
           <svg
             className="card_deatils bi bi-three-dots"
             xmlns="http://www.w3.org/2000/svg"

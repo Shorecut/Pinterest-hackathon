@@ -15,6 +15,7 @@ const defaultTheme = createTheme();
 const EditPinPage = () => {
   const { editPin, getOnePin, pin } = usePinContext();
   const { id } = useParams();
+  const navigate = useNavigate();
   const [formVal, setFormVal] = React.useState({
     title: "",
     image: "",
@@ -47,6 +48,7 @@ const EditPinPage = () => {
       return;
     }
     editPin(id, formVal);
+    navigate(-1);
   }
 
   return (
@@ -95,8 +97,8 @@ const EditPinPage = () => {
               <Select
                 value={formVal.size}
                 onChange={handleChange}
-                label="Category"
-                name="category"
+                label="Size"
+                name="size"
               >
                 <MenuItem value={"small"}>Small</MenuItem>
                 <MenuItem value={"medium"}>Medium</MenuItem>
