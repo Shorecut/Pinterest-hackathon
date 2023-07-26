@@ -133,6 +133,7 @@ body {
   /* color: #ffffff; */
   border: none !important;
   cursor: pointer;
+  border-radius: 25px !important;
 }
 
 /* Стиль кнопки при наведении на нее */

@@ -41,31 +41,56 @@ const Filter = () => {
     >
       <ToggleButton
         variant="black"
-        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        sx={{
+          border: "none",
+          color: "red",
+          fontWeight: 700,
+          borderRadius: "25px",
+        }}
         value="all"
       >
         All
       </ToggleButton>
       <ToggleButton
-        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        sx={{
+          border: "none",
+          color: "red",
+          fontWeight: 700,
+          borderRadius: "50px",
+        }}
         value="car"
       >
         Cars
       </ToggleButton>
       <ToggleButton
-        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        sx={{
+          border: "none",
+          color: "red",
+          fontWeight: 700,
+          borderRadius: "50px",
+        }}
         value="animal"
       >
         Animal
       </ToggleButton>
       <ToggleButton
-        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        sx={{
+          border: "none",
+          color: "red",
+          fontWeight: 700,
+          borderRadius: "50px",
+        }}
         value="anime"
       >
         Anime
       </ToggleButton>
       <ToggleButton
-        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        sx={{
+          border: "none",
+          color: "red",
+          fontWeight: 700,
+          borderRadius: "50px",
+        }}
         value="videogames"
       >
         VideoGames

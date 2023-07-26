@@ -36,7 +36,7 @@ const LiveSearch = () => {
         onClick={handleButton}
         className="filter"
         style={{
-          backgroundColor: "#e3e3e3",
+          backgroundColor: "transparent",
           border: "2px solid black",
           fontWeight: "600",
           borderRadius: "0px",
