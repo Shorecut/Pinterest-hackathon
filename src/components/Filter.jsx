@@ -39,11 +39,37 @@ const Filter = () => {
       onChange={handleChange}
       aria-label="Platform"
     >
-      <ToggleButton value="all">All</ToggleButton>
-      <ToggleButton value="car">Cars</ToggleButton>
-      <ToggleButton value="animal">Animal</ToggleButton>
-      <ToggleButton value="anime">Anime</ToggleButton>
-      <ToggleButton value="videogames">VideoGames</ToggleButton>
+      <ToggleButton
+        variant="black"
+        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        value="all"
+      >
+        All
+      </ToggleButton>
+      <ToggleButton
+        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        value="car"
+      >
+        Cars
+      </ToggleButton>
+      <ToggleButton
+        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        value="animal"
+      >
+        Animal
+      </ToggleButton>
+      <ToggleButton
+        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        value="anime"
+      >
+        Anime
+      </ToggleButton>
+      <ToggleButton
+        sx={{ border: "none", color: "red", fontWeight: 700 }}
+        value="videogames"
+      >
+        VideoGames
+      </ToggleButton>
     </ToggleButtonGroup>
   );
 };

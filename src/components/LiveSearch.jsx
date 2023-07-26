@@ -39,7 +39,7 @@ const LiveSearch = () => {
           backgroundColor: "#e3e3e3",
           border: "2px solid black",
           fontWeight: "600",
-          borderRadius: "25px",
+          borderRadius: "0px",
           padding: "14px",
         }}
       >
