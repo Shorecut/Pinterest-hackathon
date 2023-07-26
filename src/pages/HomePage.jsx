@@ -5,8 +5,6 @@ import { LIMIT } from "../utils/consts";
 import { useSearchParams } from "react-router-dom";
 import { usePinContext } from "../contexts/PinContext";
 
-import Filter from "./../components/Filter";
-
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { getPins, pageTotalCount, page, setPage } = usePinContext();
@@ -23,18 +21,25 @@ const HomePage = () => {
       _limit: LIMIT,
     });
   }, [page]);
+
   return (
     <div>
       <div>
         <PinList />
-        {/* <Box sx={{ maxWidth: "max-content", margin: "30px auto" }}>
+        <Box
+          sx={{
+            maxWidth: "max-content",
+            margin: "30px auto",
+            cursor: "pointer",
+          }}
+        >
           <Pagination
             count={pageTotalCount}
             page={page}
             onChange={(_, val) => setPage(val)}
             color="primary"
           />
-        </Box> */}
+        </Box>
       </div>
     </div>
   );
