@@ -14,10 +14,12 @@ import {
   Typography,
 } from "@mui/material";
 import { usePinContext } from "../contexts/PinContext";
+import { useNavigate } from "react-router-dom";
 
 const defaultTheme = createTheme();
 
 export default function AddFoodPage() {
+  const navigate = useNavigate();
   const { addPin } = usePinContext();
   const [formValue, setFormValue] = React.useState({
     title: "",
@@ -49,6 +51,7 @@ export default function AddFoodPage() {
       category: "",
       size: "",
     });
+    navigate(-1);
   };
 
   return (
