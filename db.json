@@ -1,18 +1,26 @@
 {
   "pins": [
     {
-      "title": "qwe",
-      "image": "https://tanks-alot.co.uk/wp-content/uploads/2022/08/image0.jpeg",
+      "title": "2345",
+      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "car",
-      "size": "small",
-      "id": 4
+      "size": "large",
+      "id": 5
     },
     {
+
       "title": "Ass",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "anime",
       "size": "medium",
       "id": 5
+    },
+      "title": "qwert",
+      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
+      "category": "animal",
+      "size": "medium",
+      "id": 6
+
     }
   ]
 }
