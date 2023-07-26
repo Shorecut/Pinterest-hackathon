@@ -49,6 +49,7 @@ const PinContext = ({ children }) => {
         payload: data,
       });
     } catch (error) {
+      console.log(error);
       notify(`${error.response.status}: ${error.response.statusText}`, "error");
     }
   }
@@ -69,7 +70,7 @@ const PinContext = ({ children }) => {
     try {
       await axios.delete(`${API}/${id}`);
       getPins();
-      notify("Deleted");
+      notify("Deleted", "error");
     } catch (error) {
       notify(`${error.response.status}: ${error.response.statusText}`, "error");
     }
@@ -78,7 +79,9 @@ const PinContext = ({ children }) => {
   async function editPin(id, newData) {
     try {
       await axios.patch(`${API}/${id}`, newData);
+      notify("Edited");
     } catch (error) {
+      console.log(error);
       notify(`${error.response.status}: ${error.response.statusText}`, "error");
     }
   }
@@ -86,7 +89,9 @@ const PinContext = ({ children }) => {
   async function addPin(newPin) {
     try {
       await axios.post(API, newPin);
+      notify("Added", "default");
     } catch (error) {
+      console.log(error);
       notify(`${error.response.status}: ${error.response.statusText}`, "error");
     }
   }

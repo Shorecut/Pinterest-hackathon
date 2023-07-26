@@ -7,6 +7,7 @@ import AuthContext from "./contexts/AuthContext";
 import CartContext from "./contexts/CartContext";
 import PinContext from "./contexts/PinContext";
 import Toastify from "./components/Toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,7 +17,7 @@ root.render(
     {/*<CartContext>*/}
 
     <PinContext>
-      {/* <Toastify /> */}
+      <Toastify />
       <App />
     </PinContext>
     {/*</CartContext>*/}
