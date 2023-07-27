@@ -5,8 +5,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { usePinContext } from "../contexts/PinContext";
 import EditPinPage from "../pages/EditPinPage";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../contexts/AuthContext";
 const PinItem = ({ item, pinSize }) => {
   const { deletePin } = usePinContext();
+  const { isAdmin } = useAuthContext();
   const navigate = useNavigate();
   return (
     <div className={`pin ${pinSize}`}>

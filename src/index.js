@@ -12,14 +12,14 @@ import "react-toastify/dist/ReactToastify.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    {/*<AuthContext>*/}
     {/* на потом */}
     {/*<CartContext>*/}
     <PinContext>
-      <Toastify />
-      <App />
+      <AuthContext>
+        <Toastify />
+        <App />
+      </AuthContext>
     </PinContext>
     {/*</CartContext>*/}
-    {/*</AuthContext>*/}
   </BrowserRouter>
 );

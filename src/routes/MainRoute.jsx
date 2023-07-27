@@ -4,7 +4,12 @@ import MainLayout from "../layouts/MainLayout";
 import HomePage from "../pages/HomePage";
 import AddPinPage from "../pages/AddPinPage";
 import EditPinPage from "../pages/EditPinPage";
+
+import AuthPage from "../pages/AuthPage";
+import AdminProtectedRoute from "./AdminProtectedRoute";
+
 import DetailsPage from "../pages/DetailsPage";
+
 
 const MainRoute = () => {
   return (
@@ -16,6 +21,7 @@ const MainRoute = () => {
           <Route path="/edit/:id" element={<EditPinPage />} />
           <Route path="/detailPage/:id" element={<DetailsPage />} />
         </Route>
+        <Route path="/auth" element={<AuthPage />} />
       </Routes>
     </div>
   );
