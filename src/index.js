@@ -13,6 +13,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     {/* на потом */}
+
+    <CartContext>
+      <PinContext>
+        <Toastify />
+        <App />
+      </PinContext>
+    </CartContext>
+    {/*</AuthContext>*/}
+
     {/*<CartContext>*/}
     <PinContext>
       <AuthContext>
@@ -21,5 +30,6 @@ root.render(
       </AuthContext>
     </PinContext>
     {/*</CartContext>*/}
+
   </BrowserRouter>
 );

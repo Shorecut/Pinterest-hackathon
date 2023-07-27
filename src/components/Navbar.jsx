@@ -11,6 +11,10 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import LiveSearch from "./LiveSearch";
 import { usePinContext } from "../contexts/PinContext";
+
+import { Button } from "@mui/material";
+import { useCartContext } from "../contexts/CartContext";
+
 import { Avatar, Box, Button } from "@mui/material";
 import { useAuthContext } from "../contexts/AuthContext";
 
@@ -23,11 +27,13 @@ const adminPages = [
   },
 ];
 
+
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuthContext();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const { setPage } = usePinContext();
+  const { safe, getSafe } = useCartContext();
   const navigate = useNavigate();
   function getPages() {
     if (isAdmin()) {
@@ -39,6 +45,10 @@ export default function Navbar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  React.useEffect(() => {
+    getSafe();
+  }, []);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -84,7 +94,7 @@ export default function Navbar() {
         </div>
         <div className="profile_text-items">
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink> Profile</NavLink>
+            <NavLink to="/profile"> Profile</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
             <NavLink to="/" onClick={() => setPage(1)}>
