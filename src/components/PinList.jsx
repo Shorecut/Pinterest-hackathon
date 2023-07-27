@@ -7,7 +7,7 @@ const PinList = () => {
   useEffect(() => {
     setTimeout(() => {
       getPins();
-    }, 100);
+    }, 50);
   }, []);
   return (
     <div className="mainContainer">

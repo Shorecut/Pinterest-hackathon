@@ -142,9 +142,16 @@ export default function Navbar() {
             />
           </NavLink>
 
-          <NavLink to="/">
-            <button className="home">Главная</button>
-          </NavLink>
+          <button
+            onClick={() => {
+              setPage(1);
+              navigate("/");
+            }}
+            className="home"
+          >
+            Главная
+          </button>
+
           <NavLink to="/add">
             <button className="create2">Создать</button>
           </NavLink>
