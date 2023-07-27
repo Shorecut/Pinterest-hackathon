@@ -4,21 +4,14 @@
       "title": "2345",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "car",
-      "size": "large",
-      "id": 5
-    },
-    {
-      "title": "Ass",
-      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
-      "category": "anime",
-      "size": "medium",
+      "size": "small",
       "id": 5
     },
     {
       "title": "qwert",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "animal",
-      "size": "large",
+      "size": "medium",
       "id": 6
     },
     {
@@ -32,7 +25,7 @@
       "title": "12345",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "animal",
-      "size": "small",
+      "size": "large",
       "id": 8
     },
     {
@@ -60,43 +53,36 @@
       "title": "12345",
       "image": "https://tanks-alot.co.uk/wp-content/uploads/2022/08/image0.jpeg",
       "category": "car",
-      "size": "small",
+      "size": "large",
       "id": 12
     },
     {
       "title": "1234",
       "image": "https://tanks-alot.co.uk/wp-content/uploads/2022/08/image0.jpeg",
       "category": "car",
-      "size": "medium",
+      "size": "large",
       "id": 13
     },
     {
       "title": "qwer",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "animal",
-      "size": "medium",
+      "size": "large",
       "id": 14
     },
     {
       "title": "qwert",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "anime",
-      "size": "small",
+      "size": "large",
       "id": 15
     },
     {
       "title": "qwer",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "art",
-      "size": "medium",
+      "size": "large",
       "id": 16
-    },
-    {
-      "title": "qwertg",
-      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
-      "category": "animal",
-      "size": "medium",
-      "id": 17
     }
   ]
 }
