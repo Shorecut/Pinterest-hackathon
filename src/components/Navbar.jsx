@@ -15,7 +15,7 @@ import { usePinContext } from "../contexts/PinContext";
 import { Button } from "@mui/material";
 import { useCartContext } from "../contexts/CartContext";
 
-import { Avatar, Box, Button } from "@mui/material";
+import { Avatar } from "@mui/material";
 import { useAuthContext } from "../contexts/AuthContext";
 
 const pages = [{}]; //? не знаю
@@ -26,7 +26,6 @@ const adminPages = [
     link: "/add",
   },
 ];
-
 
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuthContext();

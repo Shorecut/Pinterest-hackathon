@@ -6,6 +6,7 @@ import { usePinContext } from "../contexts/PinContext";
 import EditPinPage from "../pages/EditPinPage";
 import { useNavigate } from "react-router-dom";
 
+import { useAuthContext } from "../contexts/AuthContext";
 import { useCartContext } from "../contexts/CartContext";
 import { Badge } from "@mui/material";
 const PinItem = ({ item, pinSize }) => {
@@ -13,9 +14,6 @@ const PinItem = ({ item, pinSize }) => {
   const { safe, getSafe, isAlreadyIsCart, addFotosToSafe, deleteFotoFromSafe } =
     useCartContext();
 
-import { useAuthContext } from "../contexts/AuthContext";
-const PinItem = ({ item, pinSize }) => {
-  const { deletePin } = usePinContext();
   const { isAdmin } = useAuthContext();
 
   const navigate = useNavigate();
