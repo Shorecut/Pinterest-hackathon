@@ -12,14 +12,20 @@ import { NavLink, useNavigate } from "react-router-dom";
 import LiveSearch from "./LiveSearch";
 import { usePinContext } from "../contexts/PinContext";
 import { Button } from "@mui/material";
+import { useCartContext } from "../contexts/CartContext";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const { setPage } = usePinContext();
+  const { safe, getSafe } = useCartContext();
   const navigate = useNavigate();
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  React.useEffect(() => {
+    getSafe();
+  }, []);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -60,7 +66,7 @@ export default function Navbar() {
         </div>
         <div className="profile_text-items">
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink> Profile</NavLink>
+            <NavLink to="/profile"> Profile</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
             <NavLink to="/">Главная</NavLink>

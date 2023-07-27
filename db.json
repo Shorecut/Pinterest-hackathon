@@ -5,7 +5,7 @@
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "car",
       "size": "large",
-      "id": 5
+      "id": 4
     },
     {
       "title": "Ass",
@@ -83,20 +83,6 @@
       "category": "anime",
       "size": "small",
       "id": 15
-    },
-    {
-      "title": "qwer",
-      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
-      "category": "art",
-      "size": "medium",
-      "id": 16
-    },
-    {
-      "title": "qwertg",
-      "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
-      "category": "animal",
-      "size": "medium",
-      "id": 17
     }
   ]
 }

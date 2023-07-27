@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../card.css";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { usePinContext } from "../contexts/PinContext";
 import EditPinPage from "../pages/EditPinPage";
 import { useNavigate } from "react-router-dom";
+import { useCartContext } from "../contexts/CartContext";
+import { Badge } from "@mui/material";
 const PinItem = ({ item, pinSize }) => {
   const { deletePin } = usePinContext();
+  const { safe, getSafe, isAlreadyIsCart, addFotosToSafe, deleteFotoFromSafe } =
+    useCartContext();
   const navigate = useNavigate();
+  useEffect(() => {
+    getSafe();
+  }, []);
   return (
     <div className={`pin ${pinSize}`}>
       <img src={item.image} alt="" className="mainPic" />
       <div className="card_cover"></div>
       <div className="content2">
-        <button className="card_btn_save">Сохранить</button>
+        {isAlreadyIsCart(item.id) ? (
+          <button
+            onClick={() => deleteFotoFromSafe(item.id)}
+            aria-label="add to shopping cart"
+            className="card_btn_save"
+          >
+            Удалить
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              addFotosToSafe(item);
+            }}
+            aria-label="add to shopping cart"
+            className="card_btn_save"
+          >
+            Сохранить
+          </button>
+        )}
       </div>
       <div className="content">
         <button

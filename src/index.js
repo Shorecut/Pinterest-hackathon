@@ -14,13 +14,12 @@ root.render(
   <BrowserRouter>
     {/*<AuthContext> */}
     {/* на потом */}
-    {/*<CartContext>*/}
-
-    <PinContext>
-      <Toastify />
-      <App />
-    </PinContext>
-    {/*</CartContext>*/}
+    <CartContext>
+      <PinContext>
+        <Toastify />
+        <App />
+      </PinContext>
+    </CartContext>
     {/*</AuthContext>*/}
   </BrowserRouter>
 );
