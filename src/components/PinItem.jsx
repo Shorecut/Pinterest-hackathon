@@ -19,6 +19,10 @@ const PinItem = ({ item, pinSize }) => {
       </div>
       <div className="content">
         <button
+          onClick={() => navigate(`/detailPage/${item.id}`)}
+          className="card_button"
+        ></button>
+        <button
           onClick={() => navigate(`/edit/${item.id}`)}
           className="card_button"
         >
