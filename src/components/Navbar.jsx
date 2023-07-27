@@ -7,19 +7,42 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import LiveSearch from "./LiveSearch";
 import { usePinContext } from "../contexts/PinContext";
+
 import { Button } from "@mui/material";
 import { useCartContext } from "../contexts/CartContext";
 
+import { Avatar, Box, Button } from "@mui/material";
+import { useAuthContext } from "../contexts/AuthContext";
+
+const pages = [{}]; //? не знаю
+
+const adminPages = [
+  {
+    title: "New Pin",
+    link: "/add",
+  },
+];
+
+
 export default function Navbar() {
+  const { user, logout, isAdmin } = useAuthContext();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const { setPage } = usePinContext();
   const { safe, getSafe } = useCartContext();
   const navigate = useNavigate();
+  function getPages() {
+    if (isAdmin()) {
+      return pages.concat(adminPages);
+    } else {
+      return pages;
+    }
+  }
+
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -59,25 +82,38 @@ export default function Navbar() {
     >
       <div className="navbar_burger-menu__menu">
         <div className="img_profile_menu">
-          <img
-            src="https://i.pinimg.com/236x/a7/d4/f0/a7d4f0ffa91efca55737bdce28fd22f7.jpg"
-            alt=""
-          />
+          {!user ? (
+            <Avatar sx={{ width: "200px", height: "200px" }}></Avatar>
+          ) : (
+            <Avatar
+              sx={{ width: "200px", height: "200px" }}
+              className="avatar_img"
+              src={user.photoURL}
+            ></Avatar>
+          )}
         </div>
         <div className="profile_text-items">
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
             <NavLink to="/profile"> Profile</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink to="/">Главная</NavLink>
+            <NavLink to="/" onClick={() => setPage(1)}>
+              Главная
+            </NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
             <NavLink to="/add">Создать</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink>
-              <button className="profile_button">Sign Out</button>
-            </NavLink>
+            {!user ? (
+              <Button variant="error" component={Link} to="/auth">
+                Sign in
+              </Button>
+            ) : (
+              <Button variant="error" onClick={() => logout()}>
+                Sign out
+              </Button>
+            )}
           </MenuItem>
         </div>
       </div>
@@ -147,10 +183,16 @@ export default function Navbar() {
               alt=""
             />
           </NavLink>
+          <button
+            onClick={() => {
+              setPage(1);
+              navigate("/");
+            }}
+            className="home"
+          >
+            Главная
+          </button>
 
-          <NavLink to="/">
-            <button className="home">Главная</button>
-          </NavLink>
           <NavLink to="/add">
             <button className="create2">Создать</button>
           </NavLink>
@@ -165,10 +207,18 @@ export default function Navbar() {
               className="avatar"
             >
               <div className="img">
-                <img
-                  src="https://i.pinimg.com/236x/a7/d4/f0/a7d4f0ffa91efca55737bdce28fd22f7.jpg"
-                  alt=""
-                />
+                {!user ? (
+                  <Avatar
+                    className="avatar_img"
+                    sx={{ width: "200px", height: "200px" }}
+                  ></Avatar>
+                ) : (
+                  <Avatar
+                    className="avatar_img"
+                    sx={{ width: "200px", height: "200px" }}
+                    src={user.photoURL}
+                  ></Avatar>
+                )}
               </div>
             </a>
 

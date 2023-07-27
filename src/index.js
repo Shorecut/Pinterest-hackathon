@@ -12,8 +12,8 @@ import "react-toastify/dist/ReactToastify.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    {/*<AuthContext> */}
     {/* на потом */}
+
     <CartContext>
       <PinContext>
         <Toastify />
@@ -21,5 +21,15 @@ root.render(
       </PinContext>
     </CartContext>
     {/*</AuthContext>*/}
+
+    {/*<CartContext>*/}
+    <PinContext>
+      <AuthContext>
+        <Toastify />
+        <App />
+      </AuthContext>
+    </PinContext>
+    {/*</CartContext>*/}
+
   </BrowserRouter>
 );
