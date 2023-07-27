@@ -6,6 +6,6 @@ export const ACTION = {
   pageTotalCount: "pageTotalCount",
 };
 
-export const ADMINS = [""]; // как закончим AuthContext
+export const ADMINS = ["poiuyt@gmail.com"];
 
 export const LIMIT = 5;
