@@ -4,9 +4,7 @@ import "../card.css";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-import { usePinContext } from "../contexts/PinContext";
 import { Link, useNavigate } from "react-router-dom";
-import { Box, Button, Typography } from "@mui/material";
 
 const CartPage = ({ item, pinSize }) => {
   const { safe, getSafe, deleteFotoFromSafe, addFotosToSafe, isAlreadyIsCart } =
