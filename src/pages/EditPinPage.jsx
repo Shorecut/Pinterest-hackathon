@@ -48,7 +48,7 @@ const EditPinPage = () => {
       return;
     }
     editPin(id, formVal);
-    navigate(-1);
+    navigate("/");
   }
 
   return (

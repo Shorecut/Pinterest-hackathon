@@ -1,7 +1,6 @@
 {
   "pins": [
     {
-
       "title": "2345",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "car",
@@ -34,25 +33,10 @@
       "image": "https://i.pinimg.com/564x/65/b3/ef/65b3ef63c40530879ab6fe8c4f3abef0.jpg",
       "category": "animal",
       "size": "large",
-
       "id": 11
     },
     {
-      "title": "12345",
-      "image": "https://tanks-alot.co.uk/wp-content/uploads/2022/08/image0.jpeg",
-      "category": "car",
-      "size": "small",
-      "id": 12
-    },
-    {
-      "title": "1234",
-      "image": "https://tanks-alot.co.uk/wp-content/uploads/2022/08/image0.jpeg",
-      "category": "car",
-      "size": "medium",
-      "id": 13
-    },
-    {
-      "title": "qwer",
+      "title": "qwerty",
       "image": "https://wallpaperaccess.com/thumb/8949375.jpg",
       "category": "animal",
       "size": "medium",
@@ -64,7 +48,6 @@
       "category": "anime",
       "size": "small",
       "id": 15
-
     }
   ]
 }
