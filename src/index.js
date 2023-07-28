@@ -9,18 +9,24 @@ import PinContext from "./contexts/PinContext";
 import Toastify from "./components/Toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AuthContext from "./contexts/AuthContext";
+import UserContext from "./contexts/UserContext";
+import CommentContext from "./contexts/CommentContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     {/* на потом */}
     <AuthContext>
-      <CartContext>
-        <PinContext>
-          <Toastify />
-          <App />
-        </PinContext>
-      </CartContext>
+      <UserContext>
+        <CommentContext>
+          <CartContext>
+            <PinContext>
+              <Toastify />
+              <App />
+            </PinContext>
+          </CartContext>
+        </CommentContext>
+      </UserContext>
     </AuthContext>
   </BrowserRouter>
 );

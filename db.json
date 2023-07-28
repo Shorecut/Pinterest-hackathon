@@ -49,5 +49,21 @@
       "size": "small",
       "id": 15
     }
+  ],
+  "comments": [
+    {
+      "commentId": 1,
+      "comment": "2345432",
+      "userEmail": "poiuyt@gmail.com",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "email": "poiuyt@gmail.com",
+      "name": "asdf",
+      "photoURL": "",
+      "id": 1
+    }
   ]
 }
