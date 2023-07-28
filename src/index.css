@@ -260,6 +260,11 @@ body {
   .avatar {
     display: none;
   }
+  .navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 /* ? AddPage */
@@ -447,7 +452,8 @@ body {
 }
 
 .input__email {
-  margin-top: 150px;
+  margin-left: 40px;
+  margin-top: 0px;
   color: red;
   width: 80%;
   padding: 12px 18px;
@@ -470,4 +476,89 @@ body {
   box-shadow: 0 0 10px 1px #ee8c8c;
   border: none;
   transition: all 0.3s;
+}
+
+/* ? Detail page responsive adaptivka */
+
+@media screen and (max-width: 830px) {
+  .detailPage_container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .detailPage_container_part2 {
+    width: 80%;
+    display: block;
+    margin-top: 10px;
+    height: 600px;
+  }
+  .detailPage_container_part2__top {
+    margin-bottom: 90px;
+  }
+
+  .detailPage_container_part2__top_part2_h2 {
+    text-align: center !important;
+  }
+  .input__email {
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 80px;
+  }
+  .detailPage_container_part3_bottom {
+    margin-top: 100px;
+  }
+  .detailPage_container_part1 {
+    display: flex;
+    justify-content: center;
+  }
+  .detailPage_container_part1 img {
+    width: 70%;
+    border-radius: 50px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .detailPage_container {
+    width: 90%;
+  }
+  .detailPage_container_part2 {
+    width: 100%;
+  }
+
+  .detailPage_container_part1 img {
+    width: 100%;
+  }
+  .detailPage_container_part2__top_part2__button1 {
+    display: none;
+  }
+  .input__email {
+    margin: 50px 0;
+  }
+  .input_contaienr {
+    display: flex;
+    justify-content: center;
+  }
+  .detailPage_container_part3_bottom {
+    margin-top: -10px;
+  }
+}
+
+/* ? Scroll bar */
+
+.scrollbar {
+  width: 400px;
+  height: 200px;
+  margin: 20px auto;
+  box-shadow: 0 0 100px rgb(249, 129, 129);
+  padding: 20px;
+  text-align: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: red;
+}
+
+@media screen and (max-width: 490px) {
+  .scrollbar {
+    width: 250px;
+  }
 }

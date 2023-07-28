@@ -81,20 +81,39 @@ const Details = ({ item }) => {
               </div>
             </div>
             <h2
+              className="detailPage_container_part2__top_part2_h2
+            "
               style={{
                 textAlign: "start",
               }}
             >
               {item.title}
             </h2>
-            <input
-              type="email"
-              id="email-id"
-              name="email-id"
-              className="input__email"
-              placeholder="Оставьте комментарий"
-              required=""
-            />
+            <form onSubmit={handleSubmit}>
+              <div className="scrollbar">
+                {comment
+                  .filter((item) => id === item.commentId)
+                  .map((item, index) => (
+                    <div className="comments_comment" key={index}>
+                      <div>
+                        <img width="80" src="" alt="" />
+                        <h3>{item.userEmail}</h3>
+                      </div>
+                      <p>{item.comment}</p>
+                    </div>
+                  ))}
+              </div>
+              <div className="input_contaienr">
+                <input
+                  value={commentValue}
+                  onChange={handleChange}
+                  type="text"
+                  name="comment"
+                  className="input__email"
+                  placeholder="Оставьте комментарий"
+                />
+              </div>
+            </form>
 
             <div className="detailPage_container_part3_bottom">
               <NavLink to="/">
