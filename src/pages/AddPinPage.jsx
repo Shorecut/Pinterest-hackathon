@@ -51,7 +51,7 @@ export default function AddFoodPage() {
       category: "",
       size: "",
     });
-    navigate(-1);
+    //navigate(-1);
   };
 
   return (

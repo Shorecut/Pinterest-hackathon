@@ -10,4 +10,4 @@ export const ACTION = {
 
 export const ADMINS = ["poiuyt@gmail.com"];
 
-export const LIMIT = 10;
+export const LIMIT = 15;

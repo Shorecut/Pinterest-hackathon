@@ -15,7 +15,7 @@ const CartPage = ({ item, pinSize }) => {
   }, []);
 
   return (
-    <div>
+    <div className="mainContainer">
       {safe.pins.map((item) => (
         <div key={item.id} className={`pin ${pinSize}`}>
           <img src={item.image} alt="" className="mainPic" />
