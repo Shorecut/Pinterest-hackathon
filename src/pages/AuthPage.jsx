@@ -12,6 +12,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Navigate } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
+import { useUserContext } from "../contexts/UserContext";
 
 function Copyright(props) {
   return (
@@ -35,6 +36,7 @@ const defaultTheme = createTheme();
 export default function AuthPage() {
   const [isLogin, setIsLogin] = React.useState(true);
   const { user, register, login, logout } = useAuthContext();
+  const { users, getUser, addUser } = useUserContext();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -49,6 +51,12 @@ export default function AuthPage() {
         data.get("displayName"),
         data.get("photoURL")
       );
+      const newUser = {
+        email: data.get("email"),
+        photoURL: data.get("photoURL"),
+        name: data.get("displayName"),
+      };
+      addUser(newUser);
     }
   };
 

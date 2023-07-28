@@ -31,6 +31,9 @@ const PinContext = ({ children }) => {
   const [searchPar, setSearchPar] = useSearchParams();
   const [state, dispatch] = useReducer(reducer, init);
   const [page, setPage] = useState(+searchPar.get("_page") || 1);
+  const [detail, setDetail] = useState(null);
+
+  const currentParams = Object.fromEntries([...searchPar]);
 
   async function getPins() {
     try {
@@ -96,6 +99,11 @@ const PinContext = ({ children }) => {
     }
   }
 
+  async function getOneDetail(id) {
+    const { data } = await axios(`${API}/${id}`);
+    setDetail(data);
+  }
+
   const value = {
     pins: state.pins,
     pin: state.pin,
@@ -107,6 +115,9 @@ const PinContext = ({ children }) => {
     editPin,
     page,
     setPage,
+    detail,
+    getOneDetail,
+    currentParams,
   };
   return <pinContext.Provider value={value}>{children}</pinContext.Provider>;
 };
