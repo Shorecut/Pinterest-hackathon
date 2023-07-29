@@ -5,8 +5,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 import "../card.css";
 
-const CartPage = ({ pinSize }) => {
-  const { safe, getSafe, deleteFotoFromSafe } = useCartContext();
+const CartPage = () => {
+  const { safe, getSafe, deleteFotoFromSafe, pinSize } = useCartContext();
   const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
