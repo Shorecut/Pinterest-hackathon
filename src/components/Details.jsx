@@ -96,8 +96,8 @@ const Details = ({ item }) => {
                   .map((item, index) => (
                     <div className="comments_comment" key={index}>
                       <div>
-                        <img width="80" src="" alt="" />
-                        <h3>{item.userEmail}</h3>
+                        <img width="80" src={user.photoURL} alt="" />
+                        <h3>{user.email}</h3>
                       </div>
                       <p>{item.comment}</p>
                     </div>

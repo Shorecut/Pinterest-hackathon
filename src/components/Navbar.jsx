@@ -7,7 +7,13 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  unstable_HistoryRouter,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 
 import LiveSearch from "./LiveSearch";
 import { usePinContext } from "../contexts/PinContext";
@@ -26,6 +32,14 @@ export default function Navbar() {
   const { setPage } = usePinContext();
   const { safe, getSafe } = useCartContext();
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  const handleNavLinkClick = (e) => {
+    if (isHomePage) {
+      e.preventDefault();
+    }
+  };
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -84,8 +98,7 @@ export default function Navbar() {
             <NavLink
               to="/"
               onClick={(e) => {
-                e.preventDefault();
-                setPage(1);
+                handleNavLinkClick();
               }}
             >
               Главная
@@ -169,8 +182,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             onClick={(e) => {
-              e.preventDefault();
-              setPage(1);
+              handleNavLinkClick();
             }}
           >
             <img
@@ -181,9 +193,8 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             to="/"
-            onClick={(e) => {
-              e.preventDefault();
-              setPage(1);
+            onClick={() => {
+              handleNavLinkClick();
             }}
             className="home"
           >
