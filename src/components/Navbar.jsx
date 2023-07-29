@@ -17,15 +17,7 @@ import { useCartContext } from "../contexts/CartContext";
 
 import { Avatar } from "@mui/material";
 import { useAuthContext } from "../contexts/AuthContext";
-
-const pages = [{}]; //? не знаю
-
-const adminPages = [
-  {
-    title: "New Pin",
-    link: "/add",
-  },
-];
+import HomePage from "../pages/HomePage";
 
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuthContext();
@@ -34,13 +26,6 @@ export default function Navbar() {
   const { setPage } = usePinContext();
   const { safe, getSafe } = useCartContext();
   const navigate = useNavigate();
-  function getPages() {
-    if (isAdmin()) {
-      return pages.concat(adminPages);
-    } else {
-      return pages;
-    }
-  }
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -96,7 +81,13 @@ export default function Navbar() {
             <NavLink to="/profile"> Profile</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink to="/" onClick={() => setPage(1)}>
+            <NavLink
+              to="/"
+              onClick={(e) => {
+                e.preventDefault();
+                setPage(1);
+              }}
+            >
               Главная
             </NavLink>
           </MenuItem>
@@ -175,22 +166,29 @@ export default function Navbar() {
     <div>
       <div className="navbar">
         <div className="left">
-          <NavLink to="/">
+          <NavLink
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              setPage(1);
+            }}
+          >
             <img
               className="logo"
               src="https://seeklogo.com/images/P/pinterest-logo-8561DDA2E1-seeklogo.com.png"
               alt=""
             />
           </NavLink>
-          <button
-            onClick={() => {
+          <NavLink
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
               setPage(1);
-              navigate("/");
             }}
             className="home"
           >
             Главная
-          </button>
+          </NavLink>
 
           <NavLink to="/add">
             <button className="create2">Создать</button>
