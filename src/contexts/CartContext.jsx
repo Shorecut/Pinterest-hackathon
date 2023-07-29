@@ -34,10 +34,9 @@ const CartContext = ({ children }) => {
   function addFotosToSafe(pin) {
     const data = getDataFromLs();
     data.pins.push({ ...pin });
-    console.log(pin);
     localStorage.setItem("cart", JSON.stringify(data));
     getSafe();
-    notify("Added foto");
+    notify("Pin added");
   }
   function isAlreadyIsCart(id) {
     const data = getDataFromLs();
@@ -51,8 +50,7 @@ const CartContext = ({ children }) => {
 
     localStorage.setItem("cart", JSON.stringify(data));
     getSafe();
-    notify("Successfully removed");
-    console.log(data.pins);
+    notify("Pin removed");
   }
 
   const value = {

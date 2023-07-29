@@ -11,21 +11,21 @@
       "title": "Ice Bear from Cartoon Netwrok",
       "image": "https://i.pinimg.com/564x/a1/0c/1f/a10c1f1b5410c848a554b59fdce29e5e.jpg",
       "category": "animal",
-      "size": "medium",
+      "size": "large",
       "id": 10
     },
     {
       "title": "Bears from Cartoon Network",
       "image": "https://i.pinimg.com/564x/65/b3/ef/65b3ef63c40530879ab6fe8c4f3abef0.jpg",
       "category": "animal",
-      "size": "large",
+      "size": "small",
       "id": 11
     },
     {
       "title": "USSR Cover",
       "image": "https://i.pinimg.com/474x/b0/e5/9f/b0e59fd91f84fa3ebcb0615e76689998.jpg",
       "category": "art",
-      "size": "large",
+      "size": "small",
       "id": 12
     },
     {
@@ -41,13 +41,6 @@
       "category": "art",
       "size": "large",
       "id": 14
-    },
-    {
-      "title": "Berserk",
-      "image": "https://i.pinimg.com/236x/4f/57/d6/4f57d64dbdfbc17e3ecef201de78d585.jpg",
-      "category": "anime",
-      "size": "small",
-      "id": 15
     },
     {
       "title": "Drift",
@@ -67,14 +60,14 @@
       "title": "Elden Ring",
       "image": "https://i.pinimg.com/236x/a6/0b/3c/a60b3c7013f563cc2febe2f72e75bd69.jpg",
       "category": "videogame",
-      "size": "medium",
+      "size": "large",
       "id": 18
     },
     {
       "title": "Tomb Rider",
       "image": "https://i.pinimg.com/236x/54/df/2a/54df2ab196a122eb1351870e0ecf2601.jpg",
       "category": "videogame",
-      "size": "small",
+      "size": "large",
       "id": 19
     },
     {
@@ -92,60 +85,11 @@
       "id": 21
     },
     {
-      "title": "Witcher",
-      "image": "https://i.pinimg.com/236x/36/fc/d2/36fcd28d37de44e61b411d1a0838d3c2.jpg",
-      "category": "videogame",
-      "size": "small",
-      "id": 22
-    },
-    {
-      "title": "Vladimir stand",
-      "image": "https://i.pinimg.com/236x/63/10/cf/6310cf4a3f443cdddc88c44822744d7e.jpg",
-      "category": "anime",
-      "size": "small",
-      "id": 23
-    },
-    {
-      "title": "Haikyu",
-      "image": "https://i.pinimg.com/236x/ea/14/94/ea1494e61bf25b7e2bee8f1f987902a3.jpg",
-      "category": "anime",
-      "size": "medium",
-      "id": 24
-    },
-    {
-      "title": "Rinengan",
-      "image": "https://i.pinimg.com/236x/ee/2d/76/ee2d768d229a13217c3d2ebcdcfda73e.jpg",
-      "category": "anime",
-      "size": "small",
-      "id": 25
-    },
-    {
       "title": "Pagani",
       "image": "https://i.pinimg.com/236x/0f/a3/80/0fa380514785709323a6247ee98c6656.jpg",
       "category": "car",
       "size": "large",
       "id": 26
-    },
-    {
-      "title": "Zhiga",
-      "image": "https://i.pinimg.com/236x/7e/45/29/7e4529b5fe4f82bdd418dc8d1ad3f566.jpg",
-      "category": "car",
-      "size": "medium",
-      "id": 27
-    },
-    {
-      "title": "Moscvich",
-      "image": "https://i.pinimg.com/236x/35/e7/34/35e734fe41f639200af231b5c7a5e484.jpg",
-      "category": "car",
-      "size": "large",
-      "id": 28
-    },
-    {
-      "title": "Tracktor",
-      "image": "https://i.pinimg.com/236x/e1/d4/e8/e1d4e8e144547d19daf04ac1e399b223.jpg",
-      "category": "car",
-      "size": "medium",
-      "id": 29
     },
     {
       "title": "It's a SUPRA",
@@ -183,13 +127,6 @@
       "id": 34
     },
     {
-      "title": "Robber Dog",
-      "image": "https://i.pinimg.com/236x/62/92/bc/6292bc7fc135d814017a6cab4336c1d8.jpg",
-      "category": "animal",
-      "size": "small",
-      "id": 35
-    },
-    {
       "title": "Pesik",
       "image": "https://i.pinimg.com/236x/92/21/ba/9221ba65886d085ff1b76425d0139a9b.jpg",
       "category": "animal",
@@ -204,25 +141,11 @@
       "id": 37
     },
     {
-      "title": "Gorrily",
-      "image": "https://i.pinimg.com/236x/58/93/d3/5893d38e5cab6d3fc1e76ce171c59c73.jpg",
-      "category": "animal",
-      "size": "large",
-      "id": 38
-    },
-    {
       "title": "Red Panda",
       "image": "https://i.pinimg.com/236x/ce/47/aa/ce47aa1b417a0194f5e0e571492d7985.jpg",
       "category": "animal",
       "size": "small",
       "id": 39
-    },
-    {
-      "title": "Star Night",
-      "image": "https://i.pinimg.com/236x/8e/30/4a/8e304aac188acd1f61943e58752a2115.jpg",
-      "category": "art",
-      "size": "small",
-      "id": 40
     },
     {
       "title": "Cartina",
