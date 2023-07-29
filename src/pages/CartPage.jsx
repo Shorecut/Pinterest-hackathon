@@ -9,16 +9,18 @@ const CartPage = ({ pinSize }) => {
   const { safe, getSafe, deleteFotoFromSafe } = useCartContext();
   const navigate = useNavigate();
   useEffect(() => {
-    getSafe();
+    setTimeout(() => {
+      getSafe();
+    }, 50);
   }, []);
 
   return (
-    <div>
+    <div className="mainContainer">
       {safe.pins.map((item) => (
-        <div key={item.id} className={`pin ${pinSize}`}>
-          <img src={item.image} alt="" className="mainPic" />
-          <div className="card_cover"></div>
-          <div className="content2"></div>
+        <div key={item.id} className={`pin ${item.size}`}>
+          <img src={item.image} alt="pin" className="mainPic" />
+          {/*<div className="card_cover"></div>*/}
+          {/*<div className="content2"></div>*/}
           <div className="content">
             <button
               onClick={() => navigate(`/edit/${item.id}`)}
