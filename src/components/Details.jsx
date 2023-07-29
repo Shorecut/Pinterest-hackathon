@@ -3,9 +3,12 @@ import { useAuthContext } from "../contexts/AuthContext";
 import { usePinContext } from "../contexts/PinContext";
 import { useCommentContext } from "../contexts/CommentContext";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { useCartContext } from "../contexts/CartContext";
 
 const Details = ({ item }) => {
   const { isAdmin, user } = useAuthContext();
+  const { safe, getSafe, isAlreadyIsCart, addFotosToSafe, deleteFotoFromSafe } =
+    useCartContext();
   const { deletePin, pin } = usePinContext();
   const { comment, getComment, addComment } = useCommentContext();
   const [userInfo, setUserInfo] = useState({});
@@ -75,9 +78,25 @@ const Details = ({ item }) => {
                 <button className="detailPage_container_part2__top_part2__button1">
                   Профи...
                 </button>
-                <button className="card_btn_save card_btn_save__detail">
-                  Сохранить
-                </button>
+                {isAlreadyIsCart(item.id) ? (
+                  <button
+                    onClick={() => deleteFotoFromSafe(item.id)}
+                    aria-label="add to shopping cart"
+                    className="card_btn_save card_btn_save__detail"
+                  >
+                    Удалить
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {
+                      addFotosToSafe(item);
+                    }}
+                    aria-label="add to shopping cart"
+                    className="card_btn_save card_btn_save__detail"
+                  >
+                    Сохранить
+                  </button>
+                )}
               </div>
             </div>
             <h2
