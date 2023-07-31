@@ -18,14 +18,14 @@
       "title": "Bears from Cartoon Network",
       "image": "https://i.pinimg.com/564x/65/b3/ef/65b3ef63c40530879ab6fe8c4f3abef0.jpg",
       "category": "animal",
-      "size": "small",
+      "size": "large",
       "id": 11
     },
     {
       "title": "USSR Cover",
       "image": "https://i.pinimg.com/474x/b0/e5/9f/b0e59fd91f84fa3ebcb0615e76689998.jpg",
       "category": "art",
-      "size": "small",
+      "size": "medium",
       "id": 12
     },
     {
@@ -46,14 +46,14 @@
       "title": "Drift",
       "image": "https://i.pinimg.com/236x/09/61/9f/09619f912b2794fad2e2d733af8c6aeb.jpg",
       "category": "car",
-      "size": "large",
+      "size": "medium",
       "id": 16
     },
     {
       "title": "PS World",
       "image": "https://i.pinimg.com/236x/cc/72/82/cc7282edf3e67e78703d9d3f5bba75cb.jpg",
       "category": "videogame",
-      "size": "large",
+      "size": "medium",
       "id": 17
     },
     {
@@ -81,7 +81,7 @@
       "title": "Minecraft Story Mode",
       "image": "https://i.pinimg.com/236x/cf/4f/09/cf4f099b4f375ac13b6e876fe34af93b.jpg",
       "category": "videogame",
-      "size": "small",
+      "size": "large",
       "id": 21
     },
     {
@@ -102,21 +102,21 @@
       "title": "Porshe",
       "image": "https://i.pinimg.com/236x/55/6d/d1/556dd1d82027531350f4bffcb4aa084f.jpg",
       "category": "car",
-      "size": "large",
+      "size": "medium",
       "id": 31
     },
     {
       "title": "Impala",
       "image": "https://i.pinimg.com/236x/d5/32/b2/d532b216712d0a09d247de3d63f1faa1.jpg",
       "category": "car",
-      "size": "medium",
+      "size": "large",
       "id": 32
     },
     {
       "title": "Mazda RX-7",
       "image": "https://i.pinimg.com/236x/93/ae/89/93ae893d31dac22c6d789b8181068e32.jpg",
       "category": "car",
-      "size": "medium",
+      "size": "large",
       "id": 33
     },
     {
@@ -137,7 +137,7 @@
       "title": "VYdra",
       "image": "https://i.pinimg.com/236x/cf/eb/84/cfeb840e6e6033e5104ebb4fa47a1e35.jpg",
       "category": "animal",
-      "size": "small",
+      "size": "medium",
       "id": 37
     },
     {
@@ -158,7 +158,7 @@
       "title": "Kot so scripkoy",
       "image": "https://i.pinimg.com/236x/ff/64/9c/ff649cefd203925a6933188fa936c1f1.jpg",
       "category": "art",
-      "size": "medium",
+      "size": "large",
       "id": 42
     },
     {
@@ -179,66 +179,46 @@
       "title": "Death Skeleton",
       "image": "https://i.pinimg.com/236x/e4/3d/92/e43d922c99b793fd00444545b4cc2f92.jpg",
       "category": "art",
-      "size": "medium",
+      "size": "small",
       "id": 45
     }
   ],
   "comments": [
     {
-      "commentId": 1,
-      "comment": "2345432",
+      "commentId": "12",
+      "comment": "qwert",
       "userEmail": "poiuyt@gmail.com",
+      "userPhoto": "https://avatars.mds.yandex.net/i?id=83c25be7b031b94434b5c9b6b10b443f5c2771e8-9181167-images-thumbs&n=13",
+      "userName": "Shaimirdin",
       "id": 1
     },
     {
-      "commentId": "9",
-      "comment": "asdfghg",
-      "userEmail": "poiuyt@gmail.com",
-      "id": 5
-    },
-    {
-      "commentId": "9",
-      "comment": "dgfhcjvhbj,",
-      "userEmail": "poiuyt@gmail.com",
-      "id": 6
-    },
-    {
-      "commentId": "9",
-      "comment": "sadgsfhgjh",
-      "userEmail": "poiuyt@gmail.com",
-      "id": 7
-    },
-    {
-      "commentId": "9",
-      "comment": "ashdg",
-      "userEmail": "poiuyt@gmail.com",
-      "id": 8
-    },
-    {
-      "commentId": "9",
-      "comment": "dsfghj",
-      "userEmail": "qwerty@gmail.com",
-      "id": 9
-    },
-    {
-      "commentId": "11",
-      "comment": "dfg",
-      "userEmail": "poiuyt@gmail.com",
-      "id": 10
+      "commentId": "12",
+      "comment": "sdfghjk",
+      "userEmail": "saske@gmail.com",
+      "userPhoto": "https://avatars.mds.yandex.net/i?id=dc5218c1d222dbab5784ab06fa774939ab6e2545-9985849-images-thumbs&n=13",
+      "userName": "saske",
+      "id": 2
     }
   ],
   "users": [
-    {
-      "email": "poiuyt@gmail.com",
-      "name": "asdf",
-      "photoURL": "",
-      "id": 1
-    },
     {
       "email": "qwerty@gmail.com",
       "photoURL": "https://avatars.mds.yandex.net/i?id=83c25be7b031b94434b5c9b6b10b443f5c2771e8-9181167-images-thumbs&n=13",
       "name": "Shaimirdin Bolotov",
       "id": 2
+    },
+    {
+      "email": "poiuy@gmail.com",
+      "photoURL": "https://yt3.ggpht.com/a/AATXAJxOAE6WkjnlUF6bi1bbBGlTK4zg_XQRX8JIJaTGOg=s900-c-k-c0xffffffff-no-rj-mo",
+      "name": "Chelik",
+      "id": 4
+    },
+    {
+      "email": "saske@gmail.com",
+      "photoURL": "https://avatars.mds.yandex.net/i?id=dc5218c1d222dbab5784ab06fa774939ab6e2545-9985849-images-thumbs&n=13",
+      "name": "saske",
+      "id": 5
     }
   ]
 }

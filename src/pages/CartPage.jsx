@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "../card.css";
 
 const CartPage = () => {
-  const { safe, getSafe, deleteFotoFromSafe, pinSize } = useCartContext();
+  const { safe, getSafe, deleteFotoFromSafe } = useCartContext();
   const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {

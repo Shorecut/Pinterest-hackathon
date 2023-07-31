@@ -4,11 +4,15 @@ import { usePinContext } from "../contexts/PinContext";
 import { useCommentContext } from "../contexts/CommentContext";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useCartContext } from "../contexts/CartContext";
+import { useUserContext } from "../contexts/UserContext";
+import { notify } from "./Toastify";
+import PinList from "./PinList";
 
 const Details = ({ item }) => {
   const { isAdmin, user } = useAuthContext();
   const { safe, getSafe, isAlreadyIsCart, addFotosToSafe, deleteFotoFromSafe } =
     useCartContext();
+  const { users } = useUserContext();
   const { deletePin, pin } = usePinContext();
   const { comment, getComment, addComment } = useCommentContext();
   const [userInfo, setUserInfo] = useState({});
@@ -34,10 +38,11 @@ const Details = ({ item }) => {
       commentId: id,
       comment: commentValue,
       userEmail: userInfo.email,
-      userPhoto: userInfo.image,
+      userPhoto: userInfo.photoURL,
+      userName: userInfo.displayName,
     };
     addComment(newComment);
-    console.log(newComment);
+
     setCommentValue("");
   }
 
@@ -114,11 +119,26 @@ const Details = ({ item }) => {
                   .filter((item) => id === item.commentId)
                   .map((item, index) => (
                     <div className="comments_comment" key={index}>
-                      <div>
-                        <img width="80" src={user.photoURL} alt="" />
-                        <h3>{user.email}</h3>
+                      <div style={{ display: "flex" }}>
+                        <div>
+                          {user && (
+                            <img
+                              style={{
+                                borderRadius: "50%",
+                                width: "50px",
+                                height: "50px",
+                                marginTop: "8px",
+                              }}
+                              src={item.userPhoto}
+                              alt="userPhoto"
+                            />
+                          )}
+                        </div>
+                        <h3 style={{ margin: "auto 0", marginLeft: "5px" }}>
+                          {user && item.userName}
+                        </h3>
                       </div>
-                      <p>{item.comment}</p>
+                      {!user ? "" : <p>{item.comment}</p>}
                     </div>
                   ))}
               </div>

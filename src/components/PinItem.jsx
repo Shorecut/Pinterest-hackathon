@@ -3,7 +3,7 @@ import "../card.css";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { usePinContext } from "../contexts/PinContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
 import { useCartContext } from "../contexts/CartContext";
 const PinItem = ({ item, pinSize }) => {
@@ -12,6 +12,7 @@ const PinItem = ({ item, pinSize }) => {
   const { deletePin } = usePinContext();
   const { isAdmin } = useAuthContext();
   const navigate = useNavigate();
+  const { id } = useParams();
 
   useEffect(() => {
     getSafe();
@@ -19,7 +20,10 @@ const PinItem = ({ item, pinSize }) => {
   return (
     <div className={`pin ${pinSize}`}>
       <img src={item.image} alt="" className="mainPic" />
-      <div className="card_cover"></div>
+      <div
+        className="card_cover"
+        onClick={() => navigate(`/detailPage/${item.id}`)}
+      ></div>
       <div className="content2">
         {isAlreadyIsCart(item.id) ? (
           <button

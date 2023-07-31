@@ -15,7 +15,6 @@ import CommentContext from "./contexts/CommentContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    {/* на потом */}
     <AuthContext>
       <UserContext>
         <CommentContext>
