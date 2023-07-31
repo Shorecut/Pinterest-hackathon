@@ -92,7 +92,12 @@ export default function Navbar() {
         </div>
         <div className="profile_text-items">
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
-            <NavLink to="/profile"> Profile</NavLink>
+            {/*{user ? (
+              <NavLink to="/profile">Profile</NavLink>
+            ) : (
+              navigate("/auth")
+            )}*/}
+            <NavLink to="/profile">Profile</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
             <NavLink
@@ -108,12 +113,22 @@ export default function Navbar() {
             <NavLink to="/add">Создать</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
+            <NavLink to="https://donatty.com/vibelike" target="_blank">
+              Donate
+            </NavLink>
+          </MenuItem>
+          <MenuItem className="profile_text-item" onClick={handleMenuClose}>
             {!user ? (
-              <Button variant="error" component={Link} to="/auth">
+              <Button
+                variant="outlined"
+                color="error"
+                component={Link}
+                to="/auth"
+              >
                 Sign in
               </Button>
             ) : (
-              <Button variant="error" onClick={() => logout()}>
+              <Button variant="outlined" color="error" onClick={() => logout()}>
                 Sign out
               </Button>
             )}

@@ -15,9 +15,6 @@ const PinList = () => {
       {pins.map((item) => (
         <PinItem key={item.id} item={item} pinSize={item.size} />
       ))}
-      {pins.map((item) => {
-        <CartPage key={item.id} item={item} pinSize={item.size} />;
-      })}
     </div>
   );
 };

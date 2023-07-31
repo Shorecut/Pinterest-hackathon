@@ -40,18 +40,13 @@ const Filter = () => {
       aria-label="Platform"
     >
       <ToggleButton
-
         variant="error"
-
-
         sx={{
           border: "none",
           color: "red",
           fontWeight: 700,
 
-
           borderRadius: "25px",
-
         }}
         value="all"
       >
@@ -64,7 +59,6 @@ const Filter = () => {
           fontWeight: 700,
 
           borderRadius: "50px",
-
         }}
         value="car"
       >
@@ -99,7 +93,7 @@ const Filter = () => {
           fontWeight: 700,
           borderRadius: "50px",
         }}
-        value="videogames"
+        value="videogame"
       >
         VideoGames
       </ToggleButton>
