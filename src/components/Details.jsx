@@ -7,6 +7,7 @@ import { useCartContext } from "../contexts/CartContext";
 import { useUserContext } from "../contexts/UserContext";
 import { notify } from "./Toastify";
 import PinList from "./PinList";
+import { Box } from "@mui/material";
 
 const Details = ({ item }) => {
   const { isAdmin, user } = useAuthContext();
@@ -121,37 +122,49 @@ const Details = ({ item }) => {
                     <div className="comments_comment" key={index}>
                       <div style={{ display: "flex" }}>
                         <div>
-                          {user && (
-                            <img
-                              style={{
-                                borderRadius: "50%",
-                                width: "50px",
-                                height: "50px",
-                                marginTop: "8px",
-                              }}
-                              src={item.userPhoto}
-                              alt="userPhoto"
-                            />
-                          )}
+                          <img
+                            style={{
+                              borderRadius: "50%",
+                              width: "50px",
+                              height: "50px",
+                              marginTop: "8px",
+                            }}
+                            src={item.userPhoto}
+                            alt="userPhoto"
+                          />
                         </div>
                         <h3 style={{ margin: "auto 0", marginLeft: "5px" }}>
-                          {user && item.userName}
+                          {item.userName}
                         </h3>
                       </div>
-                      {!user ? "" : <p>{item.comment}</p>}
+                      <p>{item.comment}</p>
                     </div>
                   ))}
               </div>
-              <div className="input_contaienr">
-                <input
-                  value={commentValue}
-                  onChange={handleChange}
-                  type="text"
-                  name="comment"
-                  className="input__email"
-                  placeholder="Оставьте комментарий"
-                />
-              </div>
+              {user ? (
+                <div className="input_contaienr">
+                  <input
+                    value={commentValue}
+                    onChange={handleChange}
+                    type="text"
+                    name="comment"
+                    className="input__email"
+                    placeholder="Оставьте комментарий"
+                  />
+                </div>
+              ) : (
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <NavLink to="/auth">
+                    Зарегистрируйся чтобы оставлять комментарии
+                  </NavLink>
+                </Box>
+              )}
             </form>
 
             <div className="detailPage_container_part3_bottom">

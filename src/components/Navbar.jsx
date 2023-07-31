@@ -91,6 +91,11 @@ export default function Navbar() {
         </div>
         <div className="profile_text-items">
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
+            {/*{user ? (
+              <NavLink to="/profile">Profile</NavLink>
+            ) : (
+              navigate("/auth")
+            )}*/}
             <NavLink to="/profile">Profile</NavLink>
           </MenuItem>
           <MenuItem className="profile_text-item" onClick={handleMenuClose}>
