@@ -9,7 +9,7 @@ import AuthPage from "../pages/AuthPage";
 
 import DetailsPage from "../pages/DetailsPage";
 
-import CartPage from "../pages/CartPage";
+import ProfilePage from "../pages/ProfilePage";
 
 const MainRoute = () => {
   return (
@@ -19,7 +19,7 @@ const MainRoute = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/add" element={<AddPinPage />} />
           <Route path="/edit/:id" element={<EditPinPage />} />
-          <Route path="/profile" element={<CartPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/detailPage/:id" element={<DetailsPage />} />
         </Route>
         <Route path="/auth" element={<AuthPage />} />
