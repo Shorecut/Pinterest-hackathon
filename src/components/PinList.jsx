@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { usePinContext } from "../contexts/PinContext";
 import PinItem from "./PinItem";
-import CartPage from "../pages/CartPage";
 
 const PinList = () => {
   const { pins, getPins } = usePinContext();
