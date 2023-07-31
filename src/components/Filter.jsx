@@ -40,10 +40,10 @@ const Filter = () => {
       aria-label="Platform"
     >
       <ToggleButton
-        variant="error"
+        color="error"
         sx={{
           border: "none",
-          color: "red",
+
           fontWeight: 700,
 
           borderRadius: "25px",
@@ -53,9 +53,10 @@ const Filter = () => {
         All
       </ToggleButton>
       <ToggleButton
+        color="error"
         sx={{
           border: "none",
-          color: "red",
+
           fontWeight: 700,
 
           borderRadius: "50px",
@@ -65,9 +66,10 @@ const Filter = () => {
         Cars
       </ToggleButton>
       <ToggleButton
+        color="error"
         sx={{
           border: "none",
-          color: "red",
+
           fontWeight: 700,
           borderRadius: "50px",
         }}
@@ -76,9 +78,10 @@ const Filter = () => {
         Animal
       </ToggleButton>
       <ToggleButton
+        color="error"
         sx={{
           border: "none",
-          color: "red",
+
           fontWeight: 700,
           borderRadius: "50px",
         }}
@@ -87,15 +90,26 @@ const Filter = () => {
         Anime
       </ToggleButton>
       <ToggleButton
+        color="error"
         sx={{
           border: "none",
-          color: "red",
           fontWeight: 700,
           borderRadius: "50px",
         }}
         value="videogame"
       >
         VideoGames
+      </ToggleButton>
+      <ToggleButton
+        color="error"
+        sx={{
+          border: "none",
+          fontWeight: 700,
+          borderRadius: "50px",
+        }}
+        value="art"
+      >
+        Art
       </ToggleButton>
     </ToggleButtonGroup>
   );
