@@ -25,7 +25,7 @@
       "title": "Godjo",
       "image": "https://i.pinimg.com/564x/44/e3/c5/44e3c52f1efe7432dc71bad6e0a2f96c.jpg",
       "category": "anime",
-      "size": "medium",
+      "size": "large",
       "id": 13
     },
     {
@@ -433,31 +433,16 @@
       "category": "videogame",
       "size": "small",
       "id": 71
-    },
-    {
-      "title": "Rickario",
-      "image": "https://i.pinimg.com/564x/ed/c3/39/edc339f24c8b4ce5aff0047b17c314b2.jpg",
-      "category": "videogame",
-      "size": "large",
-      "id": 72
     }
   ],
   "comments": [
     {
-      "commentId": "43",
-      "comment": "sdfghjkl",
+      "commentId": "13",
+      "comment": "sdfghj",
       "userEmail": "poiuyt@gmail.com",
       "userPhoto": "https://avatars.mds.yandex.net/i?id=83c25be7b031b94434b5c9b6b10b443f5c2771e8-9181167-images-thumbs&n=13",
       "userName": "Shaimirdin",
       "id": 1
-    },
-    {
-      "commentId": "14",
-      "comment": "ddd",
-      "userEmail": "poiuyt@gmail.com",
-      "userPhoto": "https://avatars.mds.yandex.net/i?id=83c25be7b031b94434b5c9b6b10b443f5c2771e8-9181167-images-thumbs&n=13",
-      "userName": "Shaimirdin",
-      "id": 2
     }
   ],
   "users": [

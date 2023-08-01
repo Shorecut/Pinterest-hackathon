@@ -1,6 +1,6 @@
-export const API = "http://localhost:8001/pins";
-export const USERSAPI = "http://localhost:8001/users";
-export const COMMENTSAPI = "http://localhost:8001/comments";
+export const API = "https://db-for-pinterest.vercel.app/pins";
+export const USERSAPI = "https://db-for-pinterest.vercel.app/users";
+export const COMMENTSAPI = "https://db-for-pinterest.vercel.app/comments";
 
 export const ACTION = {
   pins: "pins",
