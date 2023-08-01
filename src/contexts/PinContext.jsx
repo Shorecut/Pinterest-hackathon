@@ -3,7 +3,6 @@ import { ACTION, API, LIMIT } from "../utils/consts";
 import { useSearchParams } from "react-router-dom";
 import { notify } from "../components/Toastify";
 import axios from "axios";
-import CartPage from "../pages/CartPage";
 
 const pinContext = createContext();
 
